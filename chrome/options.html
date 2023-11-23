@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                font-family: sans-serif;
+            }
+
+            button {
+                outline: none;
+            }
+
+            label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+                margin-top: 0.5rem;
+            }
+
+            div.setting {
+                margin: 1rem;
+            }
+
+            input, textarea {
+                width: 700px;
+            }
+            textarea {
+                height: 50px;
+            }
+
+            div.snippet {
+                margin-top: 1rem;
+                padding: 1rem;
+                background-color: hsl(0, 0%, 90%);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>webpaste options</h1>
+
+        <div class=setting>
+            <label for=server>Server:</label>
+            <input type=text id=server>
+        </div>
+
+        <div class=setting>
+            <label for=token>Token:</label>
+            <input type=text id=token>
+        </div>
+
+        <h2>Snippets</h2>
+        <div id=snippets>
+        </div>
+
+        <div class=setting>
+            <button id=add>Add Snippet</button>
+        </div>
+
+        <div class=setting>
+            <button id=save>Save</button>
+        </div>
+    </body>
+    <script src=options.js></script>
+</html>

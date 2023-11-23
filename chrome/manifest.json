@@ -1,0 +1,25 @@
+{
+    "name": "webpaste",
+    "version": "2.0",
+    "description": "Copy from web page to the terminal",
+    "permissions": ["storage", "declarativeContent", "activeTab", "tabs"],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "page_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icon16.png",
+            "48": "images/icon48.png",
+            "128": "images/icon128.png"
+        }
+    },
+    "options_page": "options.html",
+    "manifest_version": 2,
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    }
+}
