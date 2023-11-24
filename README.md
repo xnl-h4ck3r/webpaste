@@ -108,4 +108,4 @@ If you really love the tool (or any others), or they helped you find an awesome 
 
 🤘 /XNL-h4ck3r
 
-<center><img src="https://github.com/xnl-h4ck3r/webpaste/blob/main/images/options.png"></center>
+<p align="center"><img src="https://github.com/xnl-h4ck3r/webpaste/blob/main/images/options.png"></p>
