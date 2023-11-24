@@ -3,14 +3,25 @@
     <head>
         <style>
             button {
-                height: 50px;
-                width: 60px;
+                min-height: 50px;
+                width: 120px;
                 outline: none;
+                background-color: #FEB96D;
+                margin: 0.4em;
+                border-radius: 15px;
+                white-space: normal;
+                word-wrap: break-word;
+                padding: 1em;
             }
+
+            button:active {
+                background-color: white;
+            }
+            
         </style>
     </head>
     <body>
         <div id=buttons></div>
-        <script src=popup.js></script>
     </body>
+    <script src=popup.js></script>
 </html>

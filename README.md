@@ -1,4 +1,3 @@
-
 <center><img src="https://github.com/xnl-h4ck3r/webpaste/blob/main/images/title.png"></center>
 
 ## About - v2.0
@@ -11,16 +10,18 @@ This is just a upgraded version to add a few extra options and give this great t
 
 In a nutshell, it can save your dorking results to the terminal.
 
-You can go to a site such as Google, Shodan, Security Trails, etc. and then click on a button to send information you want, such as endpoints, to your terminal. For example, you can go to Google and look for `site:target.com` and then click a button for Google on the extension, and all the endpoints magically appear on your terminal, and get written to a file. This is done by entering a javascript snippet to get the endpoints, and then optionally another javascript endpoint to click the next page button. So then you can just keep clicking away and watch the site go from page to page and get all the endpoints. This is useful for sites that don't have an API.
+You can go to a site such as Google, Shodan, Security Trails, etc. and then click on a button to send information you want, such as endpoints, to your terminal. For example, you can go to Google and look for `site:target.com` and then click a button for Google on the extension, and all the endpoints magically appear on your terminal, and get written to a file. This is done by entering a javascript **snippet** to get the endpoints, and then optionally another javascript **post snippet** to click the next page button for example. So then you can just keep clicking away and watch the site go from page to page and get all the endpoints. This is useful for sites that don't have an API.
 
 ### What's different in version 2?
 
 The main differences are:
+
 - The output will also be written to a file, and the user can specify the file name.
 - The output will be unique and sorted by default, but you have an option of keep duplicates if you wish.
 - It defaults to running on localhost on port 8082. Why 8082 instead of 8080? Well, most people using this tool will probably have Burp Suite running on 8080, and I also use 8081 for proxying to Burp from my VPS.
-- Include a default snippet for Google which works at the time of writing this.
+- Include a default snippets for Google and Bing that work at the time of writing this.
 - Improved error messages.
+- Fixed some UI issues.
 - Actively maintained (while Chrome allows it to work!).
 
 ## Installing
@@ -45,12 +46,15 @@ The main differences are:
 5. The extension is now loaded. You can click on the extension icon in the toolbar, and then the pin icon to pin `webpaste` to your toolbar.
 
 **IMPORTANT:**
-When you load the Chrome extension you will see the following error: 
-```
-Manifest version 2 is deprecated, and support will be removed in 2023. See https://developer.chrome.com/blog/mv2-transition/ for more details.
-```
+When you load the Chrome extension you will see the following error:
+
+**Manifest version 2 is deprecated, and support will be removed in 2023. See https://developer.chrome.com/blog/mv2-transition/ for more details.**
+
 Google say that from January 2023 the Chrome browser will no longer run Manifest V2 extensions. That's obviously not true because it still runs, but for how long I don't know. Unfortunately this extension can't be upgraded to Manifest V3 because it has tighter security that prevents the requests being sent to the local server running on the terminal.
 
+### Why no Firefox extension?
+
+You have to use Manifest V3 for Firefox now. As mentioned above, this extension can't be upgraded to Manifest V3 with the way it works currently.
 
 ## Usage
 
@@ -67,6 +71,7 @@ You can then optionally add more javascript snippets by clicking the **Add Snipp
 ### CLI Tool
 
 These are the options available when calling `webpaste`
+
 ```
   -o string
     	output file name (default "webpaste.txt")
@@ -78,17 +83,21 @@ These are the options available when calling `webpaste`
 ```
 
 For example, start `webpaste` to write the output to a file:
+
 ```
 ./webpaste -o target_endpoints.txt
 ```
 
 ### Getting results
 
-Using the Google snippet that is included by default:
+Using the example **Google URLs** snippet that is included by default:
 
 1. Open google and search for something like `site:redbull.com`
 2. Make sure `wepaste` is running in the terminal and there are no errors, and it says it is listening.
-3. Click on `webpaste` extension and click on `Google URLs`, and you will see URLs from the google search engine in your terminal.
+3. Click on `webpaste` extension and click on `Google URLs`, and you will see URLs from the google search engine in your terminal. The **post snippet** will also load the next set of results (e.g. click the **More results** button).
+4. Keep pressing the `Google URLs` and get links. At some point Google will probably show you a Captcha screen. Just complete it and carry on clicking!
+
+**IMPORTANT: Any examples provided work at the time of writing this, but if the target changes their site, you may need to change the javascript snippet to work again.**
 
 ## Issues
 
@@ -98,3 +107,5 @@ Good luck and good hunting!
 If you really love the tool (or any others), or they helped you find an awesome bounty, consider [BUYING ME A COFFEE!](https://ko-fi.com/xnlh4ck3r) ☕ (I could use the caffeine!)
 
 🤘 /XNL-h4ck3r
+
+<center><img src="https://github.com/xnl-h4ck3r/webpaste/blob/main/images/options.png"></center>
