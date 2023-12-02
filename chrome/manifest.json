@@ -1,6 +1,6 @@
 {
     "name": "webpaste",
-    "version": "2.0",
+    "version": "2.1",
     "description": "Copy from web page to the terminal",
     "permissions": [
         "storage",

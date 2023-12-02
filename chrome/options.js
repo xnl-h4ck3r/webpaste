@@ -4,6 +4,16 @@ var add = document.getElementById("add");
 var save = document.getElementById("save");
 let snippets = document.getElementById("snippets");
 
+// Snippet examples
+googleSnippet =
+  "[...document.querySelectorAll('a')].map(n => n.href).filter(url => !url.includes('.google') && !url.startsWith('javascript:') && url !== '');";
+googlePostSnippet =
+  "Array.from(document.querySelectorAll('span')).find(el => el.innerHTML.includes('More results')).click();";
+bingSnippet =
+  "[...document.querySelectorAll('h2 > a')].map(n => n.href).filter(url => !url.includes('.bing') && url !== '');";
+bingPostSnippet =
+  "next = document.querySelector('a[title=\"Next page\"]'); document.location = next.href;";
+
 function saveSettings() {
   let snipData = [...snippets.querySelectorAll("div.snippet")]
     .map((el) => {
@@ -45,15 +55,13 @@ chrome.storage.sync.get("config", function (data) {
       snippets: [
         {
           name: "Google URLs",
-          code: "[...document.querySelectorAll('a')].map(n => n.href).filter(url => !url.includes('.google')).filter(url => !url=='');",
-          onsuccess:
-            "Array.from(document.querySelectorAll('span')).find(el => el.innerHTML.includes('More results')).click();",
+          code: googleSnippet,
+          onsuccess: googlePostSnippet,
         },
         {
           name: "Bing URLs",
-          code: "[...document.querySelectorAll('h2 > a')].map(n => n.href).filter(url => !url.includes('.bing')).filter(url => !url=='');",
-          onsuccess:
-            "next = document.querySelector('a[title='Next page']'); document.location = next.href;",
+          code: bingSnippet,
+          onsuccess: bingPostSnippet,
         },
       ],
     };

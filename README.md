@@ -1,6 +1,6 @@
 <center><img src="https://github.com/xnl-h4ck3r/webpaste/blob/main/images/title.png"></center>
 
-## About - v2.0
+## About - v2.1
 
 Where is v1.0 you might say?! If you aren't aware of `webpaste` already, it is a tool by [@TomNomNom](https://twitter.com/tomnomnom) that can be found [here](https://github.com/tomnomnom/hacks/tree/master/webpaste).
 
