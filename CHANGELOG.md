@@ -1,5 +1,15 @@
 ## Changelog
 
+- v2.2
+
+  - New
+
+    - Add an Identifier field to the Options page. It will be used to show the buttons relevant to the site the user is on.
+    - Add default snippets for duckduckgo, yahoo and startpage search engines.
+
+  - Changed
+    - Add message to the drop down on first load that says Token needs setting.
+
 - v2.1
 
   - Changed

@@ -1,6 +1,6 @@
 <center><img src="https://github.com/xnl-h4ck3r/webpaste/blob/main/images/title.png"></center>
 
-## About - v2.1
+## About - v2.2
 
 Where is v1.0 you might say?! If you aren't aware of `webpaste` already, it is a tool by [@TomNomNom](https://twitter.com/tomnomnom) that can be found [here](https://github.com/tomnomnom/hacks/tree/master/webpaste).
 
@@ -23,6 +23,7 @@ The main differences are:
 - Improved error messages.
 - Fixed some UI issues.
 - Actively maintained (while Chrome allows it to work!).
+- Provide a Identifier string that will only show the button in the popup for the relevant site.
 
 ## Installing
 
@@ -64,7 +65,7 @@ Open the extension **Options** page
 
 1. Enter the Server and port. e.g. `http://localhost:8082`
 2. Enter the Token with the value you used for the environment variable above, e.g. `ilovetomnomnom`
-3. Click the **Save** button
+3. Click the **Save** button (at the bottom of the page)
 
 You can then optionally add more javascript snippets by clicking the **Add Snippet** button.
 
