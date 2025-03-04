@@ -1,5 +1,11 @@
 ## Changelog
 
+- v2.3
+
+  - Changed
+
+    - BUG FX: It got disabled in Chrome because it can't find the Manifest version. Moved the `"manifest_version": 2,` line to the top.
+
 - v2.2
 
   - New

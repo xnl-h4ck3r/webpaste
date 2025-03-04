@@ -1,4 +1,5 @@
 {
+    "manifest_version": 2,
     "name": "webpaste",
     "version": "2.2",
     "description": "Copy from web page to the terminal",
@@ -23,7 +24,6 @@
         }
     },
     "options_page": "options.html",
-    "manifest_version": 2,
     "icons": {
         "16": "images/icon16.png",
         "48": "images/icon48.png",
